@@ -2,9 +2,9 @@ site_name: AWS & DevOps Interview Q&A Hub
 site_description: A complete interview preparation hub covering AWS Cloud, DevOps Tools & Linux.
 site_author: Learn with Nivas
 # NOTE: update repo name here if your actual GitHub repo differs from "aws-devops-interview-qa-hub"
-site_url: https://Nivas-CloudSecurityEngineer.github.io/aws-devops-interview-qa-hub/
-repo_url: https://github.com/Nivas-CloudSecurityEngineer/aws-devops-interview-qa-hub
-repo_name: Nivas-CloudSecurityEngineer/aws-devops-interview-qa-hub
+site_url: https://nivas-cloudsecurityengineer.github.io/Q-hub/
+repo_url: https://github.com/Nivas-CloudSecurityEngineer/Q-hub
+repo_name: Nivas-CloudSecurityEngineer/Q-hub
 
 docs_dir: docs
 site_dir: site
