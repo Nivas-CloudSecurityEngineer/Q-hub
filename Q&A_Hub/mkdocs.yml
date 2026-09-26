@@ -1,0 +1,132 @@
+site_name: AWS & DevOps Interview Q&A Hub
+site_description: A complete interview preparation hub covering AWS Cloud, DevOps Tools & Linux.
+site_author: Learn with Nivas
+# NOTE: update repo name here if your actual GitHub repo differs from "aws-devops-interview-qa-hub"
+site_url: https://Nivas-CloudSecurityEngineer.github.io/aws-devops-interview-qa-hub/
+repo_url: https://github.com/Nivas-CloudSecurityEngineer/aws-devops-interview-qa-hub
+repo_name: Nivas-CloudSecurityEngineer/aws-devops-interview-qa-hub
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: en
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/school
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: lime
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: lime
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@LearnwithNivas22
+      name: Learn with Nivas on YouTube
+    - icon: fontawesome/brands/github
+      link: https://github.com/Nivas-CloudSecurityEngineer
+      name: Nivas on GitHub
+
+copyright: Copyright &copy; 2026 Learn with Nivas — AWS & DevOps Interview Q&A Hub
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - def_list
+  - footnotes
+  - toc:
+      permalink: true
+      title: On this page
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+
+nav:
+  - Welcome: index.md
+  - Linux: Linux/linux.md
+  - Git & GitHub: Git_GitHub/git_github.md
+  - AWS:
+      - IAM: AWS_IAM/aws_iam.md
+      - EC2: AWS_EC2/aws_ec2.md
+      - VPC: AWS_VPC/aws_vpc.md
+      - S3: AWS_S3/aws_s3.md
+      - Route 53: AWS_Route53/aws_route53.md
+      - CloudFront: AWS_CloudFront/aws_cloudfront.md
+      - CloudWatch: AWS_CloudWatch/aws_cloudwatch.md
+      - CloudTrail: AWS_CloudTrail/aws_cloudtrail.md
+      - ELB: AWS_ELB/aws_elb.md
+      - Auto Scaling: AWS_AutoScaling/aws_autoscaling.md
+      - Lambda: AWS_Lambda/aws_lambda.md
+      - API Gateway: AWS_APIGateway/aws_apigateway.md
+      - DynamoDB: AWS_DynamoDB/aws_dynamodb.md
+      - SNS, SQS & SES: AWS_SNS_SQS_SES/aws_sns_sqs_ses.md
+      - KMS: AWS_KMS/aws_kms.md
+      - Secrets Manager: AWS_SecretsManager/aws_secretsmanager.md
+      - WAF: AWS_WAF/aws_waf.md
+      - ECR: AWS_ECR/aws_ecr.md
+      - ECS: AWS_ECS/aws_ecs.md
+  - DevOps Tools:
+      - Docker: Docker/docker.md
+      - Kubernetes: Kubernetes/kubernetes.md
+      - Jenkins: Jenkins/jenkins.md
+      - Terraform: Terraform/terraform.md
+      - Grafana & Prometheus: Grafana_Prometheus/grafana_prometheus.md
+      - SonarQube: SonarQube/sonarqube.md
+      - Trivy: Trivy/trivy.md

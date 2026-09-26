@@ -1,0 +1,9 @@
+services:
+  mkdocs:
+    build: .
+    container_name: qa_hub_mkdocs
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/docs
+    command: mkdocs serve -a 0.0.0.0:8000

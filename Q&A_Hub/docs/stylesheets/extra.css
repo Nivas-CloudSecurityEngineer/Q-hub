@@ -1,0 +1,191 @@
+/* ---------- General polish ---------- */
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding-bottom: 0.3em;
+  margin-top: 2em;
+}
+
+/* ---------- Hero banner (homepage top section) ---------- */
+.md-typeset .hero-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  margin: -0.2rem -1.2rem 1.5rem;
+  padding: 1.2rem 1.5rem 1.6rem;
+}
+
+.md-typeset .hero-banner img {
+  max-width: 100%;
+  border-radius: 0.4rem;
+}
+
+.md-typeset .hero-banner .md-button--primary {
+  background-color: #aeea00;
+  border-color: #aeea00;
+  color: #1a1a1a;
+}
+
+.md-typeset .hero-banner .md-button--primary:hover {
+  background-color: #c6ff00;
+  border-color: #c6ff00;
+  box-shadow: 0 0 16px rgba(174, 234, 0, 0.6);
+}
+
+/* Center-aligned header divs (title + badges block at top of every page) */
+.md-typeset div[align="center"] {
+  margin-bottom: 1.5em;
+}
+
+.md-typeset div[align="center"] img {
+  margin: 0.15em 0.25em;
+  vertical-align: middle;
+}
+
+/* ---------- Q&A accordion cards (<details>/<summary>) ---------- */
+.md-typeset details,
+.md-typeset details[markdown="1"] {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-left: 4px solid var(--md-accent-fg-color);
+  border-radius: 0.5rem;
+  margin: 0.9em 0;
+  padding: 0.1em 1.1em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.md-typeset details:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-left-color: var(--md-primary-fg-color);
+}
+
+.md-typeset details > summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.85em 0;
+  list-style: none;
+  outline: none;
+}
+
+.md-typeset details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.md-typeset details > summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 0.5em;
+  color: var(--md-accent-fg-color);
+  transition: transform 0.2s ease;
+}
+
+.md-typeset details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.md-typeset details > summary + p {
+  margin-top: 0;
+}
+
+.md-typeset details p:last-child {
+  padding-bottom: 0.9em;
+}
+
+/* ---------- Landing page grid cards ---------- */
+.md-typeset .grid.cards > ul > li {
+  --card-accent: var(--md-accent-fg-color);
+  border-radius: 0.6rem;
+  border-top: 4px solid var(--card-accent);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Cycle a distinct accent shade across each service/topic card */
+.md-typeset .grid.cards > ul > li:nth-child(10n + 1) { --card-accent: #2563eb; }
+.md-typeset .grid.cards > ul > li:nth-child(10n + 2) { --card-accent: #0d9488; }
+.md-typeset .grid.cards > ul > li:nth-child(10n + 3) { --card-accent: #d97706; }
+.md-typeset .grid.cards > ul > li:nth-child(10n + 4) { --card-accent: #7c3aed; }
+.md-typeset .grid.cards > ul > li:nth-child(10n + 5) { --card-accent: #e11d48; }
+.md-typeset .grid.cards > ul > li:nth-child(10n + 6) { --card-accent: #16a34a; }
+.md-typeset .grid.cards > ul > li:nth-child(10n + 7) { --card-accent: #0891b2; }
+.md-typeset .grid.cards > ul > li:nth-child(10n + 8) { --card-accent: #ea580c; }
+.md-typeset .grid.cards > ul > li:nth-child(10n + 9) { --card-accent: #4338ca; }
+.md-typeset .grid.cards > ul > li:nth-child(10n) { --card-accent: #db2777; }
+
+.md-typeset .grid.cards > ul > li > p:first-child .twemoji {
+  color: var(--card-accent);
+}
+
+/* ---------- Hero social badges (pulsing glow) ---------- */
+.pulse-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  margin: 0.75rem 0.5rem;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.4rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pulse-badge:hover {
+  filter: brightness(1.12);
+}
+
+.pulse-badge::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  opacity: 0.65;
+  animation: pulse-ring 1.6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.pulse-badge--youtube {
+  background: #ff0000;
+}
+
+.pulse-badge--github {
+  background: #181717;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  70%,
+  100% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-badge::after {
+    animation: none;
+  }
+}
+
+/* ---------- Blockquote "pro tips" ---------- */
+.md-typeset blockquote {
+  border-left: 4px solid var(--md-primary-fg-color);
+  background: var(--md-code-bg-color);
+  border-radius: 0.25rem;
+  padding: 0.6em 1em;
+}
